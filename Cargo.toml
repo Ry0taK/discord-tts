@@ -55,9 +55,15 @@ derivative = "2.2.0"
 clap = { version = "4.5.48", features = ["derive", "env"] }
 toml = "1.0.0"
 json = "0.12.4"
+tokio-tungstenite_0_21 = { package = "tokio-tungstenite", version = "0.21.0", features = [
+    "rustls-tls-native-roots",
+], default-features = false }
 tokio-tungstenite = { version = "0.28.0", features = [
-    "rustls-tls-webpki-roots",
+    "rustls-tls-native-roots",
 ] }
+reqwest_0_12 = { package = "reqwest", version = "0.12.28", features = [
+    "rustls-tls-native-roots",
+], default-features = false }
 sha2 = "0.10.9"
 hex = "0.4.3"
 uuid = { version = "1.19.0", features = ["v4"] }
